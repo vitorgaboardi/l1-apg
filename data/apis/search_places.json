@@ -1,0 +1,144 @@
+{
+    "tool_name": "Place Search",
+    "tool_description": "Find places nearby a given location and categories",
+    "home_url": "https://apidocs.geoapify.com/docs/places/",
+    "api_list": [
+        {
+            "name": "search_restaurants",
+            "description": "Searches for dining establishments. Returns names, formatted addresses, categories, opening hours, and contact phone numbers.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "description": "The city to search in (e.g., 'Paris', 'Natal').",
+                    "required": true
+                },
+                {
+                    "name": "categories",
+                    "type": "ARRAY",
+                    "description": "Specific catering sub-categories. Select the most relevant ones based on the user request.",
+                    "required": false,
+                    "values": [
+                        "bar", "biergarten", "cafe", "cafe.bubble_tea", "cafe.cake", "cafe.coffee", 
+                        "cafe.coffee_shop", "cafe.crepe", "cafe.dessert", "cafe.donut", "cafe.frozen_yogurt", 
+                        "cafe.ice_cream", "cafe.tea", "cafe.waffle", "fast_food", "fast_food.burger", 
+                        "fast_food.fish_and_chips", "fast_food.hot_dog", "fast_food.kebab", "fast_food.noodle", 
+                        "fast_food.pita", "fast_food.pizza", "fast_food.ramen", "fast_food.salad", 
+                        "fast_food.sandwich", "fast_food.soup", "fast_food.tacos", "fast_food.tapas", 
+                        "fast_food.wings", "food_court", "ice_cream", "pub", "restaurant", 
+                        "restaurant.afghan", "restaurant.african", "restaurant.american", "restaurant.arab", 
+                        "restaurant.argentinian", "restaurant.asian", "restaurant.austrian", "restaurant.balkan", 
+                        "restaurant.barbecue", "restaurant.bavarian", "restaurant.beef_bowl", "restaurant.belgian", 
+                        "restaurant.bolivian", "restaurant.brazilian", "restaurant.burger", "restaurant.caribbean", 
+                        "restaurant.chicken", "restaurant.chili", "restaurant.chinese", "restaurant.croatian", 
+                        "restaurant.cuban", "restaurant.curry", "restaurant.czech", "restaurant.danish", 
+                        "restaurant.dumpling", "restaurant.ethiopian", "restaurant.european", "restaurant.filipino", 
+                        "restaurant.fish", "restaurant.fish_and_chips", "restaurant.french", "restaurant.friture", 
+                        "restaurant.georgian", "restaurant.german", "restaurant.greek", "restaurant.hawaiian", 
+                        "restaurant.hungarian", "restaurant.indian", "restaurant.indonesian", "restaurant.international", 
+                        "restaurant.irish", "restaurant.italian", "restaurant.jamaican", "restaurant.japanese", 
+                        "restaurant.kebab", "restaurant.korean", "restaurant.latin_american", "restaurant.lebanese", 
+                        "restaurant.malay", "restaurant.malaysian", "restaurant.mediterranean", "restaurant.mexican", 
+                        "restaurant.moroccan", "restaurant.nepalese", "restaurant.noodle", "restaurant.oriental", 
+                        "restaurant.pakistani", "restaurant.persian", "restaurant.peruvian", "restaurant.pita", 
+                        "restaurant.pizza", "restaurant.portuguese", "restaurant.ramen", "restaurant.regional", 
+                        "restaurant.russian", "restaurant.sandwich", "restaurant.seafood", "restaurant.soup", 
+                        "restaurant.spanish", "restaurant.steak_house", "restaurant.sushi", "restaurant.swedish", 
+                        "restaurant.syrian", "restaurant.tacos", "restaurant.taiwanese", "restaurant.tapas", 
+                        "restaurant.tex-mex", "restaurant.thai", "restaurant.turkish", "restaurant.ukrainian", 
+                        "restaurant.uzbek", "restaurant.vietnamese", "restaurant.western", "restaurant.wings", 
+                        "taproom"
+                    ]
+                },
+                {
+                    "name": "conditions",
+                    "type": "ARRAY",
+                    "description": "Special conditions or amenities required.",
+                    "required": false,
+                    "values": [
+                        "internet_access", "internet_access.free", "internet_access.for_customers",
+                        "wheelchair", "wheelchair.yes", "wheelchair.limited", "dogs", "dogs.yes",
+                        "dogs.leashed", "no-dogs", "access", "access.yes", "access.not_specified",
+                        "access_limited", "access_limited.private", "access_limited.customers",
+                        "access_limited.with_permit", "access_limited.services", "no_access",
+                        "fee", "no_fee", "no_fee.no", "no_fee.not_specified", "named",
+                        "vegetarian", "vegetarian.only", "vegan", "vegan.only", "halal",
+                        "halal.only", "kosher", "kosher.only", "organic", "organic.only",
+                        "gluten_free", "sugar_free", "egg_free", "soy_free"
+                    ]
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "description": "Search for a specific restaurant by its name.",
+                    "required": false
+                },
+                {
+                    "name": "limit",
+                    "type": "INTEGER",
+                    "description": "Maximum results to return (Max: 20).",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "search_touristic_places",
+            "description": "Searches for landmarks, museums, and tourist attractions in a specific city. It provides details like the attraction name, address, categories, opening hours, and contact numbers.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "description": "The city to search in (e.g., 'Paris', 'London').",
+                    "required": true
+                },
+                {
+                    "name": "categories",
+                    "type": "ARRAY",
+                    "description": "Specific tourism sub-categories. Select the most relevant ones based on the user request.",
+                    "required": false,
+                    "values": [
+                        "attraction", "attraction.animatronic", "attraction.aquarium", "attraction.artwork", 
+                        "attraction.maze", "attraction.mountain_peak", "attraction.museum", "attraction.planetarium", 
+                        "attraction.roller_coaster", "attraction.theme_park", "attraction.viewpoint", 
+                        "attraction.water_park", "attraction.zoo", "information", "information.board", 
+                        "information.map", "information.office", "sights", "sights.bridge", "sights.castle", 
+                        "sights.cathedral", "sights.church", "sights.city_gate", "sights.city_hall", 
+                        "sights.city_wall", "sights.clock", "sights.fountain", "sights.lighthouse", 
+                        "sights.memorial", "sights.monastery", "sights.monument", "sights.mosque", 
+                        "sights.palace", "sights.place_of_worship", "sights.pyramid", "sights.ruins", 
+                        "sights.statue", "sights.temple", "sights.theatre", "sights.tower", 
+                        "sights.townhall", "sights.world_heritage"
+                    ]
+                },
+                {
+                    "name": "conditions",
+                    "type": "ARRAY",
+                    "description": "Special conditions or access requirements for the touristic place.",
+                    "required": false,
+                    "values": [
+                        "internet_access", "internet_access.free", "internet_access.for_customers",
+                        "wheelchair", "wheelchair.yes", "wheelchair.limited", "dogs", "dogs.yes",
+                        "dogs.leashed", "no-dogs", "access", "access.yes", "access.not_specified",
+                        "access_limited", "access_limited.private", "access_limited.customers",
+                        "access_limited.with_permit", "access_limited.services", "no_access",
+                        "fee", "no_fee", "no_fee.no", "no_fee.not_specified", "named"
+                    ]
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "description": "Search for a specific landmark or attraction by name.",
+                    "required": false
+                },
+                {
+                    "name": "limit",
+                    "type": "INTEGER",
+                    "description": "Maximum results to return (Max: 20).",
+                    "required": false
+                }
+            ]    
+        }
+    ]
+}

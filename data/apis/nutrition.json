@@ -1,0 +1,27 @@
+{
+    "tool_name": "Nutrition Information",
+    "tool_description": "Retrieve detailed nutritional data and ingredient lists for food items using the USDA FoodData Central database.",
+    "home_url": "https://api.nal.usda.gov/fdc/v1/foods/search",
+    "api_list": [
+        {
+            "name": "get_nutrition",
+            "description": "Searches for food items and returns their nutritional profile. For each match, it provides the food description, a list of ingredients, and specific macronutrient values including Calories (kcal), Protein (g), Carbohydrates (g), and Total Fats (g).",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "query",
+                    "type": "STRING",
+                    "description": "The food item or product name to search for (e.g., 'apple', 'big mac', 'greek yogurt').",
+                    "required": true
+                },
+                {
+                    "name": "limit",
+                    "type": "INTEGER",
+                    "description": "The maximum number of food results to return.",
+                    "default": 10,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

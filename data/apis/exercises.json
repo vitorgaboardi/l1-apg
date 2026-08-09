@@ -1,0 +1,42 @@
+{
+    "tool_name": "Exercise Search",
+    "tool_description": "Search for specific physical exercises based on target muscles, available equipment, or body parts.",
+    "home_url": "https://exercisedb.dev/api/v1/exercises/filter",
+    "api_list": [
+        {
+            "name": "get_exercises",
+            "description": "Filters and retrieves a list of exercises. It allows users to find workouts by specifying a muscle group, a piece of equipment, or a general body part. Returns exercise names and step-by-step instructions.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "muscle",
+                    "type": "STRING",
+                    "description": "The specific muscle group to target.",
+                    "values": ["shins", "hands", "sternocleidomastoid", "soleus", "inner thighs", "lower abs", "grip muscles", "abdominals", "wrist extensors", "wrist flexors", "latissimus dorsi", "upper chest", "rotator cuff", "wrists", "groin", "brachialis", "deltoids", "feet", "ankles", "trapezius", "rear deltoids", "chest", "quadriceps", "back", "core", "shoulders", "ankle stabilizers", "rhomboids", "obliques", "lower back", "hip flexors", "levator scapulae", "abductors", "serratus anterior", "traps", "forearms", "delts", "biceps", "upper back", "spine", "cardiovascular system", "triceps", "adductors", "hamstrings", "glutes", "pectorals", "calves", "lats", "quads", "abs"],
+                    "required": false
+                },
+                {
+                    "name": "equipment",
+                    "type": "STRING",
+                    "description": "The type of equipment available.",
+                    "values": ["stepmill machine", "elliptical machine", "trap bar", "tire", "stationary bike", "wheel roller", "smith machine", "hammer", "skierg machine", "roller", "resistance band", "bosu ball", "weighted", "olympic barbell", "kettlebell", "upper body ergometer", "sled machine", "ez barbell", "dumbbell", "rope", "barbell", "band", "stability ball", "medicine ball", "assisted", "leverage machine", "cable", "body weight"],
+                    "required": false
+                },
+                {
+                    "name": "body_parts",
+                    "type": "STRING",
+                    "description": "The general body region to filter by.",
+                    "values": ["neck", "lower arms", "shoulders", "cardio", "upper arms", "chest", "lower legs", "back", "upper legs", "waist"],
+                    "required": false
+                },
+                {
+                    "name": "limit",
+                    "type": "INTEGER",
+                    "description": "The maximum number of exercises to return.",
+                    "default": 10,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

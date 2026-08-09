@@ -1,0 +1,33 @@
+{
+    "tool_name": "Movie Recommender",
+    "tool_description": "Search for movies and film information using the TMDb (The Movie Database) service.",
+    "home_url": "https://api.themoviedb.org/3/search/movie",
+    "api_list": [
+        {
+            "name": "get_movies",
+            "description": "Searches for movies based on a keyword and optional release year. Returns a list of matching films including their name, overview, original language, popularity score, and release date",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "description": "The search term or movie title to look for (e.g., 'Inception', 'Star Wars').",
+                    "required": true
+                },
+                {
+                    "name": "year",
+                    "type": "INTEGER",
+                    "description": "The specific release year to filter results (e.g., 2010).",
+                    "required": false
+                },
+                {
+                    "name": "max_results",
+                    "type": "INTEGER",
+                    "description": "The maximum number of movie results to return.",
+                    "default": 10,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

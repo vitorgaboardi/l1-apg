@@ -1,0 +1,16 @@
+# dataset 
+dataset_path: "data/generated_dataset"
+oas_path: "data/apis"
+icnale_path: "data/icnale/processed_icnale.xlsx"
+
+# LLMs and strategy and method for data generation
+llm_used_for_data_generation: "gpt-5.4"
+generation_method: "l1-apg" 
+emb_name: "Qwen/Qwen3-Embedding-4B"
+
+# agent evaluation settings
+llm_used_in_agent: "mistralai/Ministral-3-8B-Instruct-2512"
+llm_url: "http://localhost:8000/v1"
+api_key: "no-api-needed"
+max_steps: 5
+temperature: 0.0

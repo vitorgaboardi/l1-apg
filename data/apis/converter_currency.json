@@ -1,0 +1,32 @@
+{
+    "tool_name": "Currency Converter",
+    "tool_description": "Convert currencies using the latest exchange rates from the European Central Bank. Supports a wide range of global currencies.",
+    "home_url": "https://api.frankfurter.dev/v1/latest",
+    "api_list": [
+        {
+            "name": "converter_currency",
+            "description": "It receives an amount of money, a base currency code, and a target currency code, and returns the converted amount and exchange rate based on the latest exchange rates.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "amount",
+                    "type": "NUMBER",
+                    "description": "The amount of money to convert from the base currency.",
+                    "required": true
+                },
+                {
+                    "name": "from_currency",
+                    "type": "STRING",
+                    "description": "The currency code to convert from. Must be a 3-character ISO currency code (e.g., **EUR**, **USD**).",
+                    "required": true
+                },
+                {
+                    "name": "to_currency",
+                    "type": "STRING",
+                    "description": "The target currency code to convert to. Must be a 3-character ISO currency code (e.g., **BRL**, **GBP**).",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

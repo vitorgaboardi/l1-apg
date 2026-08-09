@@ -1,0 +1,4 @@
+llm_used_for_data_generation: "gpt-5.4"
+generation_methods: ["toolalpaca"]
+data_split: 0.8
+seed: 42

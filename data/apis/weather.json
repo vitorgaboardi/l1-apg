@@ -1,0 +1,39 @@
+{
+    "tool_name": "Weather Forecast",
+    "tool_description": "Retrieve current weather and multi-day forecasts for any city worldwide.",
+    "home_url": "https://www.weatherapi.com/docs/",
+    "api_list": [
+        {
+            "name": "get_current_weather",
+            "description": "Fetches real-time weather data for a specified location, providing immediate conditions like current temperature, feels like sensation, wind, and humidity.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "description": "The name of the city to query (e.g., 'Paris', 'New York').",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "get_weather_forecast",
+            "description": "Provides a multi-day weather forecast for a specific location. It includes daily high/low temperatures, the chance of rain, maximum wind speed, and general weather conditions (e.g., 'Sunny', 'Partly Cloudy').",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "description": "The name of the city to query (e.g., 'Paris', 'New York').",
+                    "required": true
+                },
+                {
+                    "name": "days",
+                    "type": "INTEGER",
+                    "description": "The number of days for the forecast. Default is 3.",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

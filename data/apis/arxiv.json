@@ -1,0 +1,58 @@
+{
+    "tool_name": "ArXiv Paper Research",
+    "tool_description": "Search for and retrieve scientific scholarly articles from the arXiv repository.",
+    "home_url": "http://export.arxiv.org/api/query",
+    "api_list": [
+        {
+            "name": "search_paper",
+            "description": "Performs an advanced search for scientific papers. It returns metadata including the paper title, authors, abstract, publication date, and direct links to the PDF. It allows for complex filtering using authors, specific titles, and categories.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "query",
+                    "type": "STRING",
+                    "description": "General keywords to search across all fields.",
+                    "required": false
+                },
+                {
+                    "name": "title",
+                    "type": "STRING",
+                    "description": "Filter by a specific word or phrase in the paper title.",
+                    "required": false
+                },
+                {
+                    "name": "author",
+                    "type": "STRING",
+                    "description": "Filter by a specific author's name.",
+                    "required": false
+                },
+                {
+                    "name": "category",
+                    "type": "STRING",
+                    "description": "ArXiv category code (e.g., 'cs.AI' for Artificial Intelligence, 'physics.gen-ph').",
+                    "required": false
+                },
+                {
+                    "name": "year",
+                    "type": "INTEGER",
+                    "description": "The specific year of publication (e.g., 2026).",
+                    "required": false
+                },
+                {
+                    "name": "max_results",
+                    "type": "INTEGER",
+                    "description": "Maximum number of papers to return. Default is 10.",
+                    "required": false
+                },
+                {
+                    "name": "sort_by",
+                    "type": "STRING",
+                    "description": "Criteria to sort results.",
+                    "default": "submittedDate",
+                    "values": ["relevance", "lastUpdatedDate", "submittedDate"],
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

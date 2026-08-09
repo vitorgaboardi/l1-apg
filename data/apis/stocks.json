@@ -1,0 +1,43 @@
+{
+    "tool_name": "Stock Market Data",
+    "tool_description": "Retrieve real-time and historical stock market performance using Yahoo Finance data.",
+    "home_url": "https://pypi.org/project/yfinance/",
+    "api_list": [
+        {
+            "name": "get_stock_data",
+            "description": "Fetches current price, percentage change, and period highs for a given stock. Optionally returns market metadata such as market cap, P/E ratio, dividend yield, and sector information.",
+            "method": "GET",
+            "parameters": [
+                {
+                    "name": "stock",
+                    "type": "STRING",
+                    "description": "The stock symbol to query (e.g., 'AAPL', 'TSLA', 'MSFT').",
+                    "required": true
+                },
+                {
+                    "name": "period",
+                    "type": "STRING",
+                    "description": "The time window for historical data.",
+                    "values": ["1d", "5d", "1mo", "3mo", "6mo", "1y", "2y", "5y", "10y", "ytd", "max"],
+                    "default": "1d",
+                    "required": false
+                },
+                {
+                    "name": "interval",
+                    "type": "STRING",
+                    "description": "The data granularity/frequency.",
+                    "values": ["1m", "2m", "5m", "15m", "30m", "60m", "90m", "1h", "1d", "5d", "1wk", "1mo", "3mo"],
+                    "default": "1d",
+                    "required": false
+                },
+                {
+                    "name": "include_info",
+                    "type": "BOOLEAN",
+                    "description": "If set to true, returns additional company metadata like market cap, P/E ratio, and sector.",
+                    "default": false,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+data/icnale/written_essays
+data/icnale/ICNALE WE UAE Module Learner Profile.xlsx
+data/icnale/ICNALE_Survey_202601.xlsx
+data/icnale/processed_icnale.xlsx
+data/personahub/persona.jsonl
+data/toolbench/*
+.env
+
+# API keys / secrets
+.env.*
+*.env
+
+# Local config overrides that may contain real keys
+config/*local*.yaml
+config/*private*.yaml
+config/*secret*.yaml
+config/secrets.yaml
+config/evaluation.local.yaml
+config/utterance_generation.local.yaml
+
+# Editor lock files (can contain local username)
+.~lock.*

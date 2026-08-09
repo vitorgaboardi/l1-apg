@@ -1,0 +1,24 @@
+# paths
+oas_path: "data/apis"
+output_folder: "data/generated_dataset/full"
+icnale_path: "data/icnale/processed_icnale.xlsx"
+personahub_path: "data/personahub/persona.jsonl"
+
+# settings
+number_of_persona_per_country: 3  # needed for l1-apg
+number_of_persona_from_personahub: 60  # needed for p-alp
+number_of_llm_generation_per_api_method: 60   # needed for alp
+
+llm_temp: 1.0
+utterances: 5
+
+# LLM
+# using a model from DeepInfra
+# llm_name: "anthropic/claude-4-sonnet"
+# llm_url: "https://api.deepinfra.com/v1/openai"
+# api_key: "DEEPINFRA_API_KEY"
+
+# using a model from OpenAI
+llm_name: "gpt-5.4"
+llm_url: "https://api.openai.com/v1"
+api_key: "OPENAI_API_KEY"
